@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Side Quest</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="pixeljoy.css" rel="stylesheet">
+</head>
+<body>
+    <audio id="coinsound" src="collect-ring.mp3" preload="auto"></audio>
+    <audio id="bg-music" src="mario-sound.mp3" autoplay loop></audio>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="pixeljoy.html">Main Quest</a>
+                <a href="side quest.html">Side Quests</a>
+                <a href="treasurechest.html">TreasureChest</a>
+            </nav>
+        </div>
+    </header>
+
+    <h2>🕹️Side Quest</h2>
+
+    <div class="game-grid" id="cardstack">
+        <div class="game-card" data-name="Stardew Valley">
+           
+            <a href="https://store.steampowered.com/app/413150/Stardew_Valley/" >
+            <img src="https://images.pushsquare.com/f6b5a9a5050bd/stardew-valley-1-5-ps4.original.jpg" alt="Stardew Valley">
+            </a>
+            <h3>Stardew Valley</h3>
+            <p>ออกจากเมืองใหญ่ เริ่มต้นชีวิตในฟาร์มของคุณเอง ผูกมิตรกับชาวเมืองและค้นหาความลับของหุบเขาแห่งนี้</p>
+            <p><strong>แนวเกม:</strong> Simulation, RPG</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">Mac</span>
+                <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Stardew Valley')">💘</button>
+            </div>
+        </div>
+
+        <div class="game-card" data-name="Fez">
+            <a href="https://store.steampowered.com/app/224760/Fez/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/224760/header.jpg" alt="Fez">
+            </a>
+            <h3>Fez</h3>
+            <p>เกมแพลตฟอร์มที่มีการสลับมุมมอง 2D และ 3D ผู้เล่นจะได้สำรวจโลกที่เต็มไปด้วยปริศนาและความลับที่ซ่อนอยู่</p>
+            <p><strong>แนวเกม:</strong> แพลตฟอร์ม, ปริศนา</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Fez')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Eastward">
+            <a href="https://store.steampowered.com/app/977880/Eastward/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/977880/header.jpg" alt="Eastward">
+            </a>
+            <h3>Eastward</h3>
+            <p>เกมผจญภัยที่มีกราฟิกสไตล์พิกเซลและเนื้อเรื่องที่เข้มข้น ผู้เล่นจะได้สำรวจโลกที่เต็มไปด้วยความลับและตัวละครที่น่าสนใจ</p>
+            <p><strong>แนวเกม:</strong> ผจญภัย, RPG</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Eastward')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Katana ZERO">
+            <a href="https://store.steampowered.com/app/460950/Katana_ZERO/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/460950/header.jpg" alt="Katana ZERO">
+            </a>
+            <h3>Katana ZERO</h3>
+            <p>เกมแอ็กชันที่มีสไตล์นีโอนัวร์ ผู้เล่นจะได้สวมบทบาทเป็นนักฆ่าที่มีความสามารถพิเศษในการชะลอเวลา</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, นีโอนัวร์</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Katana ZERO')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Owlboy">
+            <a href="https://store.steampowered.com/app/115800/Owlboy/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/115800/header.jpg" alt="Owlboy">
+            </a>
+            <h3>Owlboy</h3>
+            <p>เกมผจญภัยที่มีกราฟิกสไตล์พิกเซล ผู้เล่นจะได้สวมบทบาทเป็น Otus นกฮูกที่ต้องช่วยเหลือเพื่อนๆ และเผชิญหน้ากับศัตรู</p>
+            <p><strong>แนวเกม:</strong> ผจญภัย, แพลตฟอร์ม</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Owlboy')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Shovel Knight">
+            <a href="https://store.steampowered.com/app/250760/Shovel_Knight/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/250760/header.jpg" alt="Shovel Knight">
+            </a>
+            <h3>Shovel Knight</h3>
+            <p>เกมผจญภัยที่มีการเล่นแบบคลาสสิกในสไตล์พิกเซล คุณจะได้สวมบทเป็นนักขุดที่ต้องต่อสู้กับศัตรูและผจญภัยในโลกที่เต็มไปด้วยอันตราย</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, ผจญภัย, แพลตฟอร์ม</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+              <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Shovel Knight')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Super Meat Boy">
+            <a href="https://store.steampowered.com/app/40800/Super_Meat_Boy/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/40800/header.jpg" alt="Super Meat Boy">
+            </a>
+            <h3>Super Meat Boy</h3>
+            <p>เกมแพลตฟอร์มที่มีความท้าทายสูง คุณจะได้เล่นเป็นก้อนเนื้อสีแดงที่ต้องหลบหลีกอุปสรรคต่างๆ เพื่อช่วยชีวิตแฟนสาวของเขา</p>
+            <p><strong>แนวเกม:</strong> แพลตฟอร์ม, แอ็กชัน</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Super Meat Boy')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Hotline Miami">
+            <a href="https://store.steampowered.com/app/219150/Hotline_Miami/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/219150/header.jpg" alt="Hotline Miami">
+            </a>
+            <h3>Hotline Miami</h3>
+            <p>เกมแอ็กชันที่เต็มไปด้วยความรุนแรงและความเร็ว ผู้เล่นจะได้ทำภารกิจฆ่าหรือหลบหลีกศัตรูในโลกที่เต็มไปด้วยการก่ออาชญากรรม</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, นีโอนัวร์</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Hotline Miami')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Dead Cells">
+            <a href="https://store.steampowered.com/app/588650/Dead_Cells/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/588650/header.jpg" alt="Dead Cells">
+            </a>
+            <h3>Dead Cells</h3>
+            <p>เกมแอ็กชันสไตล์ Roguelike ที่มีโลกแบบ Metroidvania คุณจะได้สำรวจด่านต่างๆ และต่อสู้กับศัตรูในโลกที่ไม่มีที่สิ้นสุด</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, Roguelike, Metroidvania</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+              <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Dead Cells')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Octopath Traveler">
+            <a href="https://store.steampowered.com/app/921570/OCTOPATH_TRAVELER/">
+              <img src="https://th.bing.com/th/id/OIP.EPoxAtSmUsJD55S_0-B9NgHaEP?w=616&h=353&rs=1&pid=ImgDetMain" alt="Octopath Traveler">
+            </a>
+            <h3>Octopath Traveler</h3>
+            <p>เกม RPG ที่มีกราฟิกสไตล์พิกเซลสุดสวยและการต่อสู้แบบเทิร์นเบส ผู้เล่นจะได้สำรวจโลกที่เต็มไปด้วยตัวละครที่มีเรื่องราวแตกต่างกัน.</p>
+            <p><strong>แนวเกม:</strong> RPG</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Octopath Traveler')">💘</button>
+            </div>
+          </div>          
+          
+
+          <div class="game-card" data-name="The Messenger">
+            <a href="https://store.steampowered.com/app/764790/The_Messenger/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/764790/header.jpg" alt="The Messenger">
+            </a>
+            <h3>The Messenger</h3>
+            <p>เกมผจญภัยแอ็กชันที่มีความท้าทาย ผู้เล่นจะได้สวมบทบาทเป็นนักฆ่าที่ต้องเดินทางผ่านการต่อสู้ในโลกพิกเซลที่เต็มไปด้วยอันตราย</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, ผจญภัย, แพลตฟอร์ม</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('The Messenger')">💘</button>
+            </div>
+          </div>
+          
+          <div class="game-card" data-name="Celeste">
+            <a href="https://store.steampowered.com/app/504230/Celeste/">
+              <img src="https://cdn.akamai.steamstatic.com/steam/apps/504230/header.jpg" alt="Celeste">
+            </a>
+            <h3>Celeste</h3>
+            <p>เกมแพลตฟอร์มที่มีกราฟิกพิกเซลสวยงาม ผู้เล่นจะได้ช่วยตัวละครหลักปีนเขา Celeste เพื่อหลบหลีกอุปสรรคต่างๆ ในเส้นทางที่ท้าทาย</p>
+            <p><strong>แนวเกม:</strong> แพลตฟอร์ม, ผจญภัย</p>
+            <div>
+              <span class="tag">PC</span>
+              <span class="tag">Switch</span>
+              <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+              <button class="like-btn" onclick="addToFavorites('Celeste')">💘</button>
+            </div>
+          </div>
+
+          <div class="game-card" data-name="Hollow Knight">
+            <a href="https://store.steampowered.com/app/367520/Hollow_Knight/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/367520/header.jpg" alt="Hollow Knight">
+            </a>
+            <h3>Hollow Knight</h3>
+            <p>เกมแนว Metroidvania ที่เต็มไปด้วยการสำรวจและการต่อสู้ในโลกที่เต็มไปด้วยมอนสเตอร์และการผจญภัยที่ท้าทาย</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, Metroidvania</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">Switch</span>
+                <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Hollow Knight')">💘</button>
+            </div>
+        </div>
+        
+        
+        <div class="game-card" data-name="Cuphead">
+            <a href="https://store.steampowered.com/app/268910/Cuphead/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/268910/header.jpg" alt="Cuphead">
+            </a>
+            <h3>Cuphead</h3>
+            <p>เกมแอ็กชันที่มีกราฟิกสไตล์การ์ตูนยุค 1930 พร้อมการต่อสู้กับบอสที่ท้าทายและการเล่นที่ไม่เหมือนใคร</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, แพลตฟอร์ม</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">Switch</span>
+                <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Cuphead')">💘</button>
+            </div>
+        </div>
+        
+        <div class="game-card" data-name="The Witness">
+            <a href="https://store.steampowered.com/app/210970/The_Witness/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/210970/header.jpg" alt="The Witness">
+            </a>
+            <h3>The Witness</h3>
+            <p>เกมปริศนาที่มีการสำรวจโลกที่สวยงามและเต็มไปด้วยปริศนาที่ต้องใช้ทักษะในการแก้ไข</p>
+            <p><strong>แนวเกม:</strong> ปริศนา, ผจญภัย</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('The Witness')">💘</button>
+            </div>
+        </div>
+        
+        <div class="game-card" data-name="Gris">
+            <a href="https://store.steampowered.com/app/861880/Gris/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/861880/header.jpg" alt="Gris">
+            </a>
+            <h3>Gris</h3>
+            <p>เกมผจญภัยที่มีกราฟิกสวยงามและการเล่นที่เน้นอารมณ์และการสำรวจในโลกที่มีสีสัน</p>
+            <p><strong>แนวเกม:</strong> ผจญภัย, ศิลปะ</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Gris')">💘</button>
+            </div>
+        </div>
+        
+        <div class="game-card" data-name="Spelunky 2">
+            <a href="https://store.steampowered.com/app/418530/Spelunky_2/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/418530/header.jpg" alt="Spelunky 2">
+            </a>
+            <h3>Spelunky 2</h3>
+            <p>เกมแพลตฟอร์มที่มีการสำรวจถ้ำและการผจญภัยที่เต็มไปด้วยอุปสรรคและการสุ่มที่ไม่เคยซ้ำกัน</p>
+            <p><strong>แนวเกม:</strong> แอ็กชัน, Roguelike</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">PS4</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Spelunky 2')">💘</button>
+            </div>
+        </div>
+        
+        <div class="game-card" data-name="Slay the Spire">
+            <a href="https://store.steampowered.com/app/646570/Slay_the_Spire/">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/646570/header.jpg" alt="Slay the Spire">
+            </a>
+            <h3>Slay the Spire</h3>
+            <p>เกมการ์ด Roguelike ที่ผู้เล่นต้องสร้างเด็คเพื่อเผชิญกับศัตรูที่มีพลังและการ์ดที่ไม่เหมือนกันในทุกครั้ง</p>
+            <p><strong>แนวเกม:</strong> Roguelike, การ์ด</p>
+            <div>
+                <span class="tag">PC</span>
+                <span class="tag">Switch</span>
+            </div>
+            <div class="card-actions">
+                <button class="like-btn" onclick="addToFavorites('Slay the Spire')">💘</button>
+            </div>
+        </div>
+        
+        
+          
+</div>
+<div id="popup" class="popup"></div>
+<script src="pixeljoy.js"></script>
+
+</body>
+</html>

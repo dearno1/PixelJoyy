@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>pixeljoy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="pixeljoy.css" rel="stylesheet">
+</head>
+<body>
+  <audio id="coinsound" src="collect-ring.mp3" preload="auto"></audio>
+  <audio id="bg-music" src="mario-sound.mp3" autoplay loop></audio>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="pixeljoy.html">Main Quest</a>
+        <a href="side quest.html">Side Quest</a>
+        <a href="treasurechest.html">Treasure Chest</a>  
+      </nav>
+    </div>
+  </header>
+  
+  <div class="banner">
+    <h1>what pixeljoy new ?⚡</h1>
+    <div class="banner-track">
+      <div class="banner-slide">
+        <a href="https://www.ennxo.com/article/pixel-art-mobile-games">
+          <img src="https://cdn.ennxo.com/content/uploads/1600/%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%80%E0%B8%81%E0%B8%A1%E0%B8%A0%E0%B8%B2%E0%B8%9E%E0%B8%9E%E0%B8%B4%E0%B8%81%E0%B9%80%E0%B8%8B%E0%B8%A5.webp" alt="Banner 1">
+        </a>
+      </div>
+  
+      <div class="banner-slide">
+        <a href="https://www.gamingdose.com/news/nintendo-%e0%b9%80%e0%b8%9c%e0%b8%a2%e0%b8%a7%e0%b8%b1%e0%b8%99%e0%b8%9e%e0%b8%a3%e0%b8%b5%e0%b8%ad%e0%b8%ad%e0%b8%94%e0%b8%ad%e0%b8%a3%e0%b9%8c-switch-2-%e0%b8%a3%e0%b8%ad%e0%b8%9a%e0%b9%83/">
+          <img src="https://img-prod.api-onscene.com/cdn-cgi/image/format=auto,width=1600/https://sls-prod.api-onscene.com/partner_files/trueidintrend/353950/cover_image/526889b0-cb23-11ed-84c6-5b2a333d9999.customcover.jpg" alt="Banner 2">
+        </a>
+      </div>
+    </div>
+  
+    <button class="banner-control left" onclick="moveBanner(-1)">❮</button>
+    <button class="banner-control right" onclick="moveBanner(1)">❯</button>
+</div>
+
+  <div class="activitycontainer" id="activity-container">
+    <h2>🏰 choose your quest</h2>
+    <p>pick a mission and begin your journey</p>
+    <div class="activitybuttons">
+      <button class="game-button" quest="action" >⚔️ Battle Quest (Action)</button>
+      <button class="game-button" quest="adventure">🗺️ Explorer's Quest (Adventure)</button>
+      <button class="game-button" quest="puzzle">🧠 Logic Quest (Puzzle)</button>
+      <button class="game-button" quest="simulation">🛠️ Life Quest (Simulation)</button>
+      <button class="game-button" quest="rpg">🧝 Hero's Quest (RPG)</button>
+      <button class="game-button" quest="horror">👻 Fear Quest (Horror)</button>
+    </div>
+  </div>
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <h3 id="game-title"></h3>
+      <img id="game-image" src="" alt="" />
+      <p id="game-description"></p>
+      <p id="game-rating"></p>
+      <p id="game-review"></p>
+      <button id="accept-btn">accept</button>
+    </div>
+  </div>
+  
+  <script src="pixeljoy.js"></script>
+</body>
+</html>
