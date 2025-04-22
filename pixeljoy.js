@@ -160,7 +160,7 @@ const gameData = {
     },
     {
       name: "The Sims 1",
-      image: "https://th.bing.com/th/id/OIP.iAOmMMQAmWWn0BrDOp06HgHaFj?rs=1&pid=ImgDetMain",
+      image: "https://2.bp.blogspot.com/-5s4Y_OGa2wE/WzMgieiRoVI/AAAAAAAACeI/yo-YTuujDT0oDBDCsXXyco4jNPXsyUIuACLcBGAs/s1600/sims-1.png",
       description: "สร้างชีวิตในโลกพิกเซลตามจินตนาการของคุณ",
       rating: "8.8/10",
       review: "เกมจำลองชีวิตที่มีระบบสร้างและควบคุมชีวิตได้อย่างลึกซึ้ง",
@@ -251,6 +251,7 @@ const gameDescription = document.getElementById('game-description');
 const gameRating = document.getElementById('game-rating');
 const gameReview = document.getElementById('game-review');
 const acceptBtn = document.getElementById('accept-btn');
+
 //popup
 buttons.forEach(button => {
   button.addEventListener('click', () => {
@@ -276,10 +277,9 @@ acceptBtn.addEventListener('click', () => {
 //gamecard
 const stack = document.getElementById('cardstack');
 let cards = Array.from(stack.querySelectorAll('.game-card'));
-let currentIndex = 0;
+
 
 function likeGame() {
-  const currentCard = cards[currentIndex];
   const gameName = currentCard.dataset.name;
   addToFavorites(gameName);
 }

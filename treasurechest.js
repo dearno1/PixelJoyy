@@ -86,7 +86,7 @@ const gameDataa = {
     
 };
 
-
+//Favorites
 const container = document.getElementById("treasurechest");
 const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
 
@@ -115,12 +115,13 @@ if (favorites.length === 0) {
     });
 }
 
+//remove
 function removeFromFavorites(gameName) {
     const updatedFavorites = favorites.filter(g => g !== gameName);
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     location.reload(); 
 }
-
+//Recommendations
 function getRecommendedGames() {
     const recommendations = [];
     const added = new Set(favorites); 
@@ -134,7 +135,6 @@ function getRecommendedGames() {
         }
     });
 
-   
     Object.entries(gameDataa).forEach(([name, data]) => {
         if (added.has(name)) return;
 
@@ -148,7 +148,7 @@ function getRecommendedGames() {
 
     return recommendations;
 }
-
+//renderRecommendations
 function renderRecommendations() {
     const recContainer = document.getElementById("recommendations");
     const recommended = getRecommendedGames();
