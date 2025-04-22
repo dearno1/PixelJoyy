@@ -91,11 +91,11 @@ const container = document.getElementById("treasurechest");
 const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
 
 if (favorites.length === 0) {
-    document.getElementById("emptyMessage").style.display = "block";
+    container.innerHTML = "<p>ไม่มีเกมโปรดในรายการ</p>";
 } else {
     favorites.forEach(game => {
         const data = gameDataa[game]; 
-        if (!data) return;
+        if (!data) return; //skipnextgame
 
         const card = document.createElement("div");
         card.className = "game-card";
@@ -111,35 +111,35 @@ if (favorites.length === 0) {
                 <button onclick="removeFromFavorites('${game}')">🗑️ ลบ</button>
             </div>
         `;
-        container.appendChild(card);
+        container.appendChild(card); //addcard
     });
 }
 
 //remove
 function removeFromFavorites(gameName) {
-    const updatedFavorites = favorites.filter(g => g !== gameName);
+    const updatedFavorites = favorites.filter(g => g !== gameName); //cheackgame
     localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     location.reload(); 
 }
-//Recommendations
+//recommendations
 function getRecommendedGames() {
     const recommendations = [];
-    const added = new Set(favorites); 
+    const added = new Set(favorites); //savegame
 
    
     const likedGenres = new Set();
     favorites.forEach(game => {
-        const gameInfo = gameDataa[game];
+        const gameInfo = gameDataa[game]; //gameDataa from fav
         if (gameInfo && gameInfo.genre) {
             gameInfo.genre.split(',').map(g => g.trim()).forEach(g => likedGenres.add(g));
         }
     });
 
     Object.entries(gameDataa).forEach(([name, data]) => {
-        if (added.has(name)) return;
+        if (added.has(name)) return; //if have skip
 
         const gameGenres = data.genre.split(',').map(g => g.trim());
-        const hasCommonGenre = gameGenres.some(genre => likedGenres.has(genre));
+        const hasCommonGenre = gameGenres.some(genre => likedGenres.has(genre)); //cheack
 
         if (hasCommonGenre) {
             recommendations.push({ name, data });
@@ -160,7 +160,7 @@ function renderRecommendations() {
 
     recommended.forEach(({ name, data }) => {
         const card = document.createElement("div");
-        card.className = "game-card";
+        card.className = "game-card"; //css
         card.innerHTML = `
             <a href="${data.link}" target="_blank">
                 <img src="${data.img}" alt="${name}">
@@ -170,7 +170,7 @@ function renderRecommendations() {
             <p><strong>แนวเกม:</strong> ${data.genre}</p>
             <div>${data.platforms.map(p => `<span class="tag">${p}</span>`).join('')}</div>
         `;
-        recContainer.appendChild(card);
+        recContainer.appendChild(card); //addcard
     });
 }
 renderRecommendations();

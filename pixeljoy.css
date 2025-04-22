@@ -15,7 +15,7 @@ header {
   left: 0;
   text-align: center;
   border-bottom: 4px solid #F06292;
-  z-index: 1000;
+  z-index: 1000; 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -339,10 +339,7 @@ h2 {
     from { opacity: 1; }
     to { opacity: 0; }
   }
-
   
-  
-/* mobile */
 @media screen and (max-width: 768px) {
   .game-button {
     width: 100%;
@@ -367,7 +364,7 @@ h2 {
   }
 }
 
-/* tablet*/
+
 @media screen and (max-width: 1024px) {
   .game-button {
     font-size: 14px;
