@@ -340,43 +340,113 @@ h2 {
     to { opacity: 0; }
   }
   
-@media screen and (max-width: 768px) {
-  .game-button {
-    width: 100%;
+/*  small mobile */
+@media screen and (max-width: 480px) {
+  body {
+    padding-top: 100px;
   }
 
-  .banner img {
+  h1, h2 {
+    font-size: 16px;
+  }
+
+  .game-card {
+    width: 90%;
     height: auto;
   }
 
-  .banner-control {
-    font-size: 24px;
+  .banner {
+    height: 250px;
   }
 
+  .game-button {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  /* flexbox */
   nav {
-    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; 
   }
 
   nav a {
-    margin: 5px 0;
+    font-size: 9px; 
+    padding: 6px 8px; 
+    white-space: nowrap; 
+    max-width: 100%; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+  }
+}
+
+/*  smartphones  */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .game-card {
     width: 100%;
-    text-align: center;
+  }
+
+  .banner {
+    height: 300px;
+  }
+
+  .banner-control {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .popup-content {
+    padding: 20px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; 
+  }
+
+  nav a {
+    font-size: 10px; 
+    padding: 6px 12px;
+    white-space: nowrap;
+    max-width: 100%; 
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 
-@media screen and (max-width: 1024px) {
-  .game-button {
-    font-size: 14px;
-    padding: 14px 25px;
+/* Tablets and small laptops */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .game-grid {
+    gap: 16px;
+  }
+
+  .game-card {
+    width: 45%;
   }
 
   nav a {
     font-size: 12px;
-    padding: 14px 20px;
+    padding: 12px 18px;
+  }
+}
+
+/* Standard laptops */
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+  .game-grid {
+    gap: 24px;
   }
 
-  .popup-content {
-    max-width: 90%;
+  .game-card {
+    width: 280px;
+  }
+
+  .game-button {
+    font-size: 13px;
+    padding: 18px;
   }
 }

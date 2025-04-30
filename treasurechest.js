@@ -91,7 +91,7 @@ const container = document.getElementById("treasurechest");
 const favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
 
 if (favorites.length === 0) {
-    container.innerHTML = "<p>ไม่มีเกมโปรดในรายการ</p>";
+    container.innerHTML = "<p>Your treasure chest is empty</p>";
 } else {
     favorites.forEach(game => {
         const data = gameDataa[game]; 
